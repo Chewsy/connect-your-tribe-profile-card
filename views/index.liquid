@@ -1,14 +1,58 @@
 {% render 'partials/head.liquid' %}
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
+<main>
 
-  <p>{{ person.name }}</p>
+    <header>
+      <img src="assets/mugshot.png" id="mugshot" alt="Dit ben ik!" width="10%">
+    </header>
 
-  <footer></footer>
-</article>
+    <section id="overMij">
+
+      <h2>Over mij</h2>
+      <p id="paragraaf1">
+        <strong>Hoi!</strong><br><br>
+        Mijn naam is Chama, ik ben 26 jaar oud en woon in Amsterdam.
+        <br>Ik ben iemand die leergierig, zorgzaam en ambitieus is. <br><br>
+        In het dagelijks leven houd ik me vooral bezig met de opleiding en socialiseren met vrienden.<br><br>
+        Mijn vrije tijd besteed ik <em>graag</em> aan het luisteren en ontdekken van muziek, werken aan kleine projecten
+        zoals coderen of klei boetseren en ik kan <em>echt</em> genieten van een lange wandeling als het buiten lekker
+        weer is.
+      </p>
+
+      <img src="assets/concert.jpg" alt="Een afbeelding van een concertzaal met felle paarse lichten en rook."
+        width="413px" height="289px">
+
+    </section>
+
+    <section id="mijnDoelen">
+
+      <h2>Mijn doelen</h2>
+      <p id="paragraaf2">
+        Mijn doelen die ik wil bereiken zijn de onderwerpen die ik op de opleiding ga leren elke semester,
+        <em>namelijk</em>;
+      </p>
+
+      <ol>
+        <li>
+          Static web
+        </li>
+        <li>
+          Data-Driven Web
+        </li>
+        <li>
+          Workflow, Tooling & Frameworks
+        </li>
+      </ol>
+
+      <img src="assets/illustratie-doelen.jpg"
+        alt="Illustratie van een persoon die naar een bergtop kijkt met een rood vlaggetje, met een route aangegeven door een gestippelde lijn tot aan de top.">
+
+    </section>
+
+    <footer>
+      <p>Gemaakt in week 1 :]</p>
+    </footer>
+
+  </main>
 
 {% render 'partials/foot.liquid' %}
