@@ -1,112 +1,89 @@
 body {
   margin: 0;
-  max-width: 100vw;
+  width: 100vw;
+  height: 100dvh;
+  background-color: #9b6b99;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+
+  & span {
+    color: #dd99db;
+    opacity: 0.5;
+    font-size: 30px;
+
+    z-index: -1;
+    position: fixed;
+    text-align: justify;
+    word-spacing: 10px;
+  }
 }
 
 main {
-  display: grid;
-}
-
-header {
-  width: 100%;
-  height: 200px;
-  background-image: url(assets/headerbg.png);
-  background-size: contain;
-  display: inline-grid;
-  justify-items: center;
-  align-items: end;
-  background-repeat: repeat;
-}
-
-header img:hover {
-  content: url(assets/mugshot-hover.png);
-}
-
-#overMij {
-  background-color: #ffbaf5;
   height: 100%;
-  color: #baffc3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  padding-left: 50px;
-}
-
-#overMij h2 {
-  font: bold 40px/1 sans-serif;
-  grid-column: 1 / 2;
-}
-
-#paragraaf1 {
-  font: 20px/1 sans-serif;
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  justify-self: center;
-  align-self: center;
-}
-
-#overMij img {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  justify-self: center;
-  align-self: center;
-  height: 80%;
-}
-
-#mijnDoelen {
-  background-color: #baffc3;
-  height: 100%;
-  color: #ffbaf5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px auto auto;
-  padding-right: 50px;
-}
-
-#mijnDoelen h2 {
-  font: bold 40px/1 sans-serif;
-  grid-column: 2 / 3;
-}
-
-#paragraaf2 {
-  font: 20px/1 sans-serif;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  justify-self: center;
-  align-self: center;
-}
-
-#mijnDoelen img {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  justify-self: center;
-  align-self: center;
-  height: 80%;
-}
-
-ol {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
-  align-self: start;
-  font: 20px/1 sans-serif;
-}
-
-footer {
-  background-color: #ffbaf5;
-  color: #baffc3;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-content: center;
-  text-align: center;
-  font: 15px/1 sans-serif;
-  height: 50px;
+  align-items: center;
 }
 
-footer a {
-  text-decoration: none;
-  color: #baffc3;
+#visitekaartContainer {
+  background-color: #b17aaf;
+  border: 2px solid #dd99db;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 20px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 30px;
+  grid-template-areas:
+    "avatar name"
+    "avatar birthdate"
+    "avatar bio"
+    "avatar github_handle";
+
+  width: 45vw;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    background-color: #c78ac5;
+    box-shadow: rgba(26, 26, 26, 0.1) 0px 1px 0px;
+    padding: 10px;
+    border-radius: 10px;
+
+    & .onderwerp {
+      font-weight: 700;
+    }
+  }
 }
 
-footer a:hover {
-  text-decoration: wavy overline #ffbaf5;
+#avatar {
+  grid-area: avatar;
+}
+
+#name {
+  grid-area: name;
+
+  & h1 {
+    margin: 0;
+  }
+}
+
+#birthdate {
+  grid-area: birthdate;
+}
+
+#bio {
+  grid-area: bio;
+}
+
+#github_handle {
+  grid-area: github_handle;
 }
