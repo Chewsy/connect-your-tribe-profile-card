@@ -1,16 +1,38 @@
 {% render 'partials/head.liquid' %}
 <div>
-<span> {{ person | json:4 }} {{ person | json:4 }} {{ person | json:4 }} {{ person | json:4 }} {{ person | json:4 }}</span>
+  <span>
+    {{ person | json: 4 }}
+    {{ person | json: 4 }}
+    {{ person | json: 4 }}
+    {{ person | json: 4 }}
+    {{ person | json: 4 }}
+  </span>
 </div>
 <main>
+  <nav>
+    <div class="navItem">
+      <p>Het is vandaag {{ 'now' | date: '%a, %b %d' }}</p>
+    </div>
+
+    <div class="navItem">
+      <a href="practice.liquid">Practice pagina</a>
+      </div>
+
+          <div class="navItem">
+      <a href="https://liquidjs.com/tutorials/intro-to-liquid.html" target="_blank">Liquid docs</a>
+      </div>
+
+  </nav>
   <section id="visitekaartContainer">
-<div id="avatar">
-  <img src="{{ person.avatar }}" id="mugshot" width="100%">
-</div>
-    <div id="name"><h1>{{ person.name }}</h1></div>
-    <div id="birthdate">{{  person.birthdate }}</div>
+    <div id="avatar">
+      <img src="{{ person.avatar }}" id="mugshot" width="100%">
+    </div>
+    <div id="name">
+      <h1>{{ person.name }}</h1>
+    </div>
+    <div id="birthdate">{{ person.birthdate }}</div>
     <div id="bio">{{ person.bio }}</div>
-    <div id="handle">@{{ person.github_handle }}</div> 
+    <div id="handle">@{{ person.github_handle }}</div>
   </section>
 </main>
 

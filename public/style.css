@@ -8,7 +8,7 @@ body {
 
   & span {
     color: #dd99db;
-    opacity: 0.5;
+    opacity: 0.2;
     font-size: 30px;
 
     z-index: -1;
@@ -24,6 +24,52 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+
+  & div:nth-child(1) {
+
+    background-color: #855c83;
+    border: 1px solid #b17aaf;
+
+  }
+}
+
+
+.navItem {
+  width: auto;
+  height: auto;
+  background-color: #b17aaf;
+  border: 2px solid #dd99db;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 2px 4px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: small;
+
+  & p {
+    font-weight: 700;
+  }
+
+  & a {
+    color: white;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: #c78ac5;
+    transform: scale(1.05);
+    transition: ease-in-out 0.5s;
+  }
 }
 
 #visitekaartContainer {
@@ -45,7 +91,7 @@ main {
   width: 45vw;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: ease-in-out 0.5s;
   }
 
